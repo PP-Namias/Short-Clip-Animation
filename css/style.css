@@ -7,18 +7,33 @@
   --gradient-violet-rgb: 171, 111, 218;
   
   --highlight-blue-rgb: 45, 37, 143;
+
+  --dark: rgb(20, 20, 20);
+  --yellow: rgb(253, 216, 53);
+  --blue: rgb(98, 0, 234);
+  
+  --c1: rgb(38, 70, 83);
+  --c2: rgb(42, 157, 143);
+  
+  --left-color: var(--c1);
+  --right-color: var(--c2);
 }
 
 body{
-  align-items: center;
   background-color: var(--background-color);
   display: flex;
   height: 100vh;
-  justify-content: center;
   margin: 0px;
   overflow: hidden;
   padding: 0px;
   width: 100vw;
+}
+
+.intro {
+  z-index: 3;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
 }
 
 .absolute-centered {

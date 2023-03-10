@@ -1,4 +1,4 @@
-const hulu = new SplitText("#hulu-text"),
+const hulu = new SplitText("#namias-text"),
       originals = new SplitText("#originals-text");
 
 const t1 = new gsap.timeline();
@@ -20,13 +20,63 @@ t1.from(["#top-gradient", "#bottom-gradient"], 0.7, { ease: "power3.inOut", filt
 
 document.getElementById("restart-button").onclick = () => t1.restart();
 
+const wrapper = document.getElementById("tiles");
 
-const left = document.getElementById("left-side");
+let columns = 0,
+    rows = 0,
+    toggled = false;
 
-const handleMove = e => {
-  left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+const toggle = () => {
+  toggled = !toggled;
+  
+  document.body.classList.toggle("toggled");
 }
 
-document.onmousemove = e => handleMove(e);
+const handleOnClick = index => {
+  toggle();
+  
+  anime({
+    targets: ".tile",
+    opacity: toggled ? 0 : 1,
+    delay: anime.stagger(50, {
+      grid: [columns, rows],
+      from: index
+    })
+  });
+}
 
-document.ontouchmove = e => handleMove(e.touches[0]);
+const createTile = index => {
+  const tile = document.createElement("div");
+  
+  tile.classList.add("tile");
+  
+  tile.style.opacity = toggled ? 0 : 1;
+  
+  tile.onclick = e => handleOnClick(index);
+  
+  return tile;
+}
+
+const createTiles = quantity => {
+  Array.from(Array(quantity)).map((tile, index) => {
+    wrapper.appendChild(createTile(index));
+  });
+}
+
+const createGrid = () => {
+  wrapper.innerHTML = "";
+  
+  const size = document.body.clientWidth > 800 ? 100 : 50;
+  
+  columns = Math.floor(document.body.clientWidth / size);
+  rows = Math.floor(document.body.clientHeight / size);
+  
+  wrapper.style.setProperty("--columns", columns);
+  wrapper.style.setProperty("--rows", rows);
+  
+  createTiles(columns * rows);
+}
+
+createGrid();
+
+window.onresize = () => createGrid();

@@ -12,14 +12,11 @@
   --yellow: rgb(253, 216, 53);
   --blue: rgb(98, 0, 234);
   
-  --c1: rgb(38, 70, 83);
-  --c2: rgb(42, 157, 143);
+  --c1: rgb(108, 54, 139);
+  --c2: rgb(42, 105, 157);
   
   --left-color: var(--c1);
   --right-color: var(--c2);
-  
-  --g1: rgb(98, 0, 234);
-  --g2: rgb(236, 64, 122);
 }
 
 body{
@@ -30,13 +27,6 @@ body{
   overflow: hidden;
   padding: 0px;
   width: 100vw;
-}
-
-.namias-text {
-  z-index: 3;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
 }
 
 .absolute-centered {
@@ -160,7 +150,7 @@ body{
   z-index: 3;
 }
 
-#hulu-text {
+#namias-text {
   color: var(--bugatti-color);
   font-size: 8em;
   height: 120px;
@@ -213,98 +203,82 @@ body{
   }
 }
 
+
+
+
+
+
+
+
+
 .main {
-  position: absolute;
-  left: 64px;
+  display: grid;
+  margin: 0% 0 0 -100%;
+  z-index: 1;
+  opacity: 0.10;
 }
 
-body {
-  animation: background-pan 10s linear infinite;
-  background: linear-gradient(
-    to right,
-    var(--g1),
-    var(--g2),
-    var(--g1)
-  );
-  background-size: 200%;
+.side {
+  display: grid;
   height: 100vh;
   overflow: hidden;
-  margin: 0px;
-}
-
-body.toggled {
-  animation: none;
-}
-
-body.toggled > #title {
-  opacity: 0;
-}
-
-body.toggled > #icon {
-  opacity: 1;
-}
-
-body.toggled > #tiles > .tile:hover {
-  opacity: 0.1 !important;
-}
-
-.centered {
-  left: 50%;
+  place-items: center;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
-#tiles {
-  height: calc(100vh - 1px);
-  width: calc(100vw - 1px);
-  position: relative;
-  z-index: 2;
-  
-  display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
-  grid-template-rows: repeat(var(--rows), 1fr);
-}
-
-.tile {
-  cursor: pointer;
-  position: relative;
-}
-
-.tile:hover:before {
-  background-color: rgb(30, 30, 30);
-}
-
-.tile:before {
-  background-color: rgb(15, 15, 15);
-  content: "";
-  inset: 0.5px;
-  position: absolute;
-}
-
-#title {
-  color: white;
+.side .title {
   font-family: "Rubik", sans-serif;
   font-size: 6vw;
-  margin: 0px;
-  pointer-events: none;
-  transition: opacity 1200ms ease;
-  width: 50vw;
-  z-index: 3;
+  margin: 0px 10vw;
+  width: 80vw;
 }
 
-#title > .fancy {
-  color: var(--g2);
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.5em;
-  line-height: 0.9em;
+.side .fancy {
+  font-family: "Lobster", cursive;
+  font-size: 1.3em;
+  line-height: 0.8em;
 }
 
-#icon {
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 80vmin;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 1200ms ease;
-  z-index: 1;
+#left-side {
+  background-color: var(--left-color);
+  background-image: url("../img/darkchoco.png");
+  width: 60%;
+  z-index: 2;
+  background-size: cover;
 }
+
+#left-side .title {  
+  color: white;  
+}
+
+#left-side .fancy {
+  color: var(--right-color);
+}
+
+#left-side img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;}
+
+#right-side {
+  background-color: var(--right-color);
+  background-image: url("../img/goldiron.png");
+  background-size: cover;
+}
+
+#right-side .title {
+  color: var(--right-color);
+}
+
+#right-side .fancy {
+  color: white;
+}
+
+#right-side img {
+  position: absolute;;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;}

@@ -28,15 +28,14 @@
 
 ## <img src="https://cdn.discordapp.com/emojis/852881450667081728.gif" width="20px" height="20px"> 》Feature
 - [x] <b>Slider mouse effects</b>: Users can slide the mouse across the screen to see different angles of the Bugatti Veyron. This creates an immersive and engaging experience that allows users to explore the car in a unique way.
-- [ ] <b>Sports car animation</b>: The website features an animated video that showcases the power and beauty of the 2011 Bugatti Veyron. The animation highlights the car's key features and offers users a glimpse of what it would be like to drive this incredible machine.
-- [ ] <b>Responsive design</b>: The website is designed to be responsive, meaning that it looks great and functions perfectly on any device, from desktop computers to mobile phones.
+- [x] <b>Sports car animation</b>: The website features an animated video that showcases the power and beauty of the 2011 Bugatti Veyron. The animation highlights the car's key features and offers users a glimpse of what it would be like to drive this incredible machine.
+- [x] <b>Responsive design</b>: The website is designed to be responsive, meaning that it looks great and functions perfectly on any device, from desktop computers to mobile phones.
 
 ## <img src="https://cdn.discordapp.com/emojis/1028680849195020308.png" width="25px" height="25px"> 》Screenshots
 <br />
 <p align="center">
   <a href="https://github.com/PP-Namias/Short-Clip-Animation">
-    <img src="./images/Screenshot-1.png">
-    <img src="./images/Screenshot-2.png">
+    <img src="./img/Short Clip Animation.png">
   </a>
 </p>
 

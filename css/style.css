@@ -258,14 +258,6 @@ body{
   }
 }
 
-
-
-
-
-
-
-
-
 .main {
   display: grid;
   margin: 0% 0 0 -100%;
@@ -300,6 +292,7 @@ body{
   background-image: url("../img/darkchoco.png");
   z-index: 2;
   background-size: cover;
+  animation: fadeIn 6.45s ease-in-out;
 }
 
 #left-side .title {  
@@ -321,6 +314,7 @@ body{
   background-color: var(--right-color);
   background-image: url("../img/goldiron.png");
   background-size: cover;
+  animation: fadeIn 6.45s ease-in-out;
 }
 
 #right-side .title {
@@ -337,4 +331,16 @@ body{
   border-radius: 4px;
   padding: 5px;
   width: 150px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }  
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

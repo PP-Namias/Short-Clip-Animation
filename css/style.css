@@ -64,11 +64,54 @@ body{
   position: absolute;
   transform: translateX(-50%);
   z-index: 100;
-  
 }
 
 #restart-button:hover,
 #restart-button:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#website-button {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 6px;
+  bottom: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  left: 40%;
+  outline: none;
+  padding: 10px 20px;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+#website-button:hover,
+#website-button:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#code-button {
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 6px;
+  bottom: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  left: 60%;
+  outline: none;
+  padding: 10px 20px;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+#code-button:hover,
+#code-button:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -196,7 +239,17 @@ body{
 }
 
 @media(max-width: 600px) {  
+  #website-button {
+    left: auto;
+    right: 10px;
+    transform: none;
+  }
   #restart-button {
+    left: auto;
+    right: 10px;
+    transform: none;
+  }
+  #code-button {
     left: auto;
     right: 10px;
     transform: none;

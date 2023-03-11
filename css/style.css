@@ -215,7 +215,7 @@ body{
   display: grid;
   margin: 0% 0 0 -100%;
   z-index: 1;
-  opacity: 0.10;
+  opacity: 1;
 }
 
 .side {
@@ -243,7 +243,6 @@ body{
 #left-side {
   background-color: var(--left-color);
   background-image: url("../img/darkchoco.png");
-  width: 60%;
   z-index: 2;
   background-size: cover;
 }
@@ -260,7 +259,8 @@ body{
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 150px;}
+  width: 150px;
+}
 
 #right-side {
   background-color: var(--right-color);
@@ -281,4 +281,5 @@ body{
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 150px;}
+  width: 150px;
+}

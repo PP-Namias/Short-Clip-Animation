@@ -80,12 +80,13 @@ body{
   color: white;
   cursor: pointer;
   font-size: 0.9em;
-  left: 40%;
+  left: 38%;
   outline: none;
   padding: 10px 20px;
   position: absolute;
   transform: translateX(-50%);
   z-index: 100;
+  text-decoration: none;
 }
 
 #website-button:hover,
@@ -102,12 +103,13 @@ body{
   color: white;
   cursor: pointer;
   font-size: 0.9em;
-  left: 60%;
+  left: 63%;
   outline: none;
   padding: 10px 20px;
   position: absolute;
   transform: translateX(-50%);
   z-index: 100;
+  text-decoration: none;
 }
 
 #code-button:hover,
